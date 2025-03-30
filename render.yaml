@@ -1,11 +1,12 @@
 services:
   - type: web
     name: backend
+    rootDirectory: backend  # Set backend as the working directory
     env: node
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && npm start
+    buildCommand: npm install
+    startCommand: npm start
     envVars:
-      - key: DB_URL  # Make sure this matches your .env file
+      - key: DB_URL
         sync: false
       - key: PORT
         value: "5000"
