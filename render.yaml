@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: backend
+    rootDirectory: backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DB_URI
+        sync: false
+      - key: PORT
+        value: "5000"
