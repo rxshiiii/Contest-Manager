@@ -1,10 +1,10 @@
 services:
   - type: web
     name: backend
-    rootDirectory: backend  # Set backend as the working directory
+    rootDirectory: backend  # Important: Tell Render to look inside the backend folder
     env: node
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: node index.js
     envVars:
       - key: DB_URL
         sync: false
